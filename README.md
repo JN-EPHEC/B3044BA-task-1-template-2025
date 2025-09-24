@@ -84,7 +84,11 @@ const users = [
 4.  **User Descriptions:** Create a new variable `userDescriptions` which is an array of strings describing each user.
     - _Expected format:_ `"Alice is 28 years old."`
 
+---
+
 ### Exercise 2: String and Array Manipulation
+
+---
 
 ### Scenario
 
@@ -113,6 +117,44 @@ const products = [
 - Use the `trim()` method to remove spaces.
 - Think about `map()` to iterate over the array and create a new one.
 - The `slice()`, `toUpperCase()`, and `toLowerCase()` methods will be useful for formatting.
+
+---
+
+## Exercise 3: Using Objects and Arrow Functions
+
+### Scenario
+
+Your music application manages information about artists and their albums. You have raw data and need to create a structured object for a clearer display.
+
+### Working Data
+
+```javascript
+const albumData = {
+  name: "Thriller",
+  artist: "Michael Jackson",
+  releaseYear: 1982,
+  tracks: [
+    "Wanna Be Startin' Somethin'",
+    "Baby Be Mine",
+    "The Girl Is Mine",
+    "Thriller",
+    "Beat It",
+  ],
+};
+```
+
+### Instructions
+
+1.  Create an arrow function `formatAlbum` that takes an `album` object as a parameter.
+2.  This function should return a formatted string using **template literals**. The string should look like this: `"The album Thriller by Michael Jackson, released in 1982, contains 5 tracks."`.
+3.  Display the result of the function call in the console.
+4.  Modify the function to accept an additional parameter, `showTracks`. If `showTracks` is `true`, add the list of tracks to the end of the string, like this: `"Tracks: Wanna Be Startin' Somethin', Baby Be Mine, ..."`. Use the `join()` method to format the list of tracks.
+
+### Tips and Reminders 💡
+
+- Arrow functions (`=>`) are more concise and useful for callbacks.
+- Template literals (with backticks \`\`) allow you to inject variables directly into a string.
+- Don't forget about object destructuring to easily access properties of the `album` object.
 
 ---
 
