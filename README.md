@@ -51,8 +51,8 @@ To complete these exercises, follow this procedure:
 
 1.  Make sure you are on the `main` branch: `git checkout main`
 2.  Create and switch to the exercises branch: `git checkout -b week1-js-exercises`
-3.  Create an `exercise1.mjs` file where you will write your solutions. Write your results in console (`console.log()`).
-4.  Execute the script using `node exercise1.mjs`
+3.  Create or edit an `exercise<X>.mjs`, where X is the exercise number, file where you will write your solutions. Write your results in console (`console.log()`).
+4.  Execute the script using `node exercise<X>.mjs`
 5.  Once the exercises are complete, commit your changes on this branch. **Do not merge it into `main`**.
 
 ### Exercise 1: Data Manipulation
@@ -84,12 +84,35 @@ const users = [
 4.  **User Descriptions:** Create a new variable `userDescriptions` which is an array of strings describing each user.
     - _Expected format:_ `"Alice is 28 years old."`
 
-### Exercise 2: Asynchronicity
+### Exercise 2: String and Array Manipulation
 
-1.  **Simulation Function:** Create an asynchronous function named `WorkspaceUserProfile`. This function will take a `userId` as a parameter.
-2.  **Simulate Latency:** Inside the function, use `new Promise` and `setTimeout` to simulate a network call that takes 2 seconds to respond.
-3.  **Result:** If the `userId` is `123`, the promise should resolve with an object `{ name: 'John Doe', status: 'Active' }`. For any other `userId`, the promise should reject with a `new Error('User not found')`.
-4.  **Function Call:** Call this function with a valid `userId`, and then with an invalid `userId`, using `async/await` and a `try...catch` block to properly handle the response and errors. Log the results or errors to the console.
+### Scenario
+
+You're working on an e-commerce application and need to clean up product data received from an API. You have a list of product names and need to format them for proper display.
+
+### Working Data
+
+```javascript
+const products = [
+  "  mobile phone ",
+  " laptop computer  ",
+  "Headphones",
+  "  smartwatch",
+];
+```
+
+### Instructions
+
+1.  For each product name, remove any extra spaces at the beginning and end.
+2.  Capitalize the first character of each name and make the rest lowercase.
+3.  Store the formatted names in a new array.
+4.  Display the final array in the console.
+
+### Tips and Reminders 💡
+
+- Use the `trim()` method to remove spaces.
+- Think about `map()` to iterate over the array and create a new one.
+- The `slice()`, `toUpperCase()`, and `toLowerCase()` methods will be useful for formatting.
 
 ---
 
@@ -109,24 +132,7 @@ You are not prohibited from using generative AI tools for your assignments. If y
 Your 'main' branch must be up to date by the defined deadline!
 ```
 
-For this assignment, you will work on the `main` branch. When finished, you will `commit` and `push` your changes to your GitHub Classroom repository. Also, write your code directly in the `src/index.ts` file.
-
-To get the dataset, you will use the public **JSONPlaceholder** API to fetch a list of "todos".
-
-```
-https://jsonplaceholder.typicode.com/todos
-```
-
-1.  **The script:**
-    1. Write an asynchronous function named `fetchAndFilterTodos`.
-       - Inside this function, use the `fetch API` to retrieve the data from the URL.
-       - After that, if there is a bad status (property `ok` is false on your response), you have to write a log message saying `"Network response was not ok"` in the console.
-    - Once the data is correctly fetched, `parse` the JSON result as an Object.
-    - Then, filter this list to keep only the `"todos"` that are **completed** (`completed: true`).
-    - Log the `number of completed tasks` and the `list of their titles` to the console.
-    - Handle potential errors (e.g., network call failure) with a `try...catch` block.
-
----
+No assignment this week.
 
 ## Documentation and Resources
 
